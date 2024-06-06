@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --watch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test coverage-app --code-coverage"
+    "test": "ng test coverage-app --code-coverage",
+    "test-ci": "node --max_old_space_size=6144 node_modules/@angular/cli/bin/ng test coverage-app --code-coverage --watch=false"
   },
   "private": true,
   "dependencies": {
