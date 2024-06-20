@@ -16,18 +16,15 @@ describe('AppComponent', () => {
   });
 
   it(`should have a test method`, () => {
-    const element = fixture.nativeElement.querySelector('#button');
-    element.click()
+    // component.test()
   });
 
-  it(`should have a test method`, () => {
-    component.title = 'test';
-    const element = fixture.nativeElement.querySelector('#button');
-    element.click()
-  });
+  // it(`should have a test method`, () => {
+  //   component.title = 'test';
+  //   component.test()
+  // });
 
-  it(`should have a test2 method`, () => {
-    const element = fixture.nativeElement.querySelector('#button2');
-    element.click()
-  });
+  // it(`should have a test2 method`, () => {
+  //   component.test2();
+  // });
 });

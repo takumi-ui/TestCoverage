@@ -9,17 +9,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'app';
+  // title = 'app';
 
-  test() {
-    if (this.title === 'app') {
-      console.log('app test');
-    } else {
-      console.log('test');
-    }
-  }
+  // test() {
+  //   const a = 1, b = 2;
+  //   this.title === 'app' ? console.log('app test') : console.log('test');
+  // }
 
-  test2() {
-    console.log('test2');
-  }
+  // test2() {
+  //   console.log('test2');
+  // }
 }
