@@ -2,10 +2,25 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 let project = process.env['npm_config_project'];
+const fromCI = process.env['npm_config_ci'];
 if (project == null) {
   project = process.argv[3];
   console.log(project);
 }
+
+console.log('Args: ', process.argv);
+let reporters = [
+  { type: 'text-summary' }
+]
+
+if (!fromCI) {
+  reporters = [
+    { type: 'html' },
+    {type: 'text-summary'}
+  ]
+}
+
+console.log('FromCI: ', fromCI);
 
 module.exports = function (config) {
   config.set({
@@ -34,10 +49,10 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, `./coverage/${project}`),
       subdir: '.',
       reporters: [
-        { type: 'html' }, 
         { type: 'text-summary' }
       ],
-      includeAllSources: true
+      includeAllSources: true,
+      file: 'coverage.txt'
     },
     reporters: ['progress', 'kjhtml'],
     browsers: ['Chrome'],
