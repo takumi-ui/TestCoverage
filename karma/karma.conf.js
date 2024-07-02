@@ -54,8 +54,6 @@ module.exports = function (config) {
       includeAllSources: true,
       file: 'coverage.txt'
     },
-    reporters: ['progress', 'kjhtml'],
-    browsers: ['Chrome'],
     restartOnFileChange: true
   });
 };
