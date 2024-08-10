@@ -51,9 +51,9 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, `./coverage/${project}`),
       subdir: '.',
       reporters: [
-        { type: 'html' },
         { type: 'text-summary' }
       ],
+      file: 'coverage-summary.txt'
     },
     reporters: ['progress', 'kjhtml'],
     browsers: ['Chrome'],

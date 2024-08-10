@@ -1,0 +1,16 @@
+
+name: Code Coverage
+on: workflow_dispatch
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: Install dependencies
+              run: npm install
+            - name: Unit tests
+              run: npm run test-ci
+            - name: Code coverage
+              run: |
+                    cat ./karma/coverage/--code-coverage/coverage-summary.txt
